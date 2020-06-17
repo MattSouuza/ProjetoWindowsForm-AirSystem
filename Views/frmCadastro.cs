@@ -48,15 +48,18 @@ namespace AirSystem.Views
 
         private void frmCadastro_Load(object sender, EventArgs e)
         {
-            txtBoxNome.Text = usuario.Nome;
-            txtBoxSobrenome.Text = usuario.Sobrenome;
-            txtBoxEndereco.Text = usuario.Endereco;
-            txtBoxNumero.Text = usuario.Numero;
-            dateNascimento.Text = usuario.Nascimento;
-            txtBoxUsuario.Text = usuario.NomeUsuario;
-            txtBoxSenha.Text = usuario.Senha;
-            txtBoxConfirmarSenha.Text = usuario.ConfirmarSenha;
-            checkBoxAdmin.Checked = usuario.IsAdmin;
+            if (usuario != null)
+            {
+                txtBoxNome.Text = usuario.Nome;
+                txtBoxSobrenome.Text = usuario.Sobrenome;
+                txtBoxEndereco.Text = usuario.Endereco;
+                txtBoxNumero.Text = usuario.Numero;
+                dateNascimento.Text = usuario.Nascimento;
+                txtBoxUsuario.Text = usuario.NomeUsuario;
+                txtBoxSenha.Text = usuario.Senha;
+                txtBoxConfirmarSenha.Text = usuario.ConfirmarSenha;
+                checkBoxAdmin.Checked = usuario.IsAdmin;
+            }
         }
 
         private void bttCadastrar_Click(object sender, EventArgs e)
