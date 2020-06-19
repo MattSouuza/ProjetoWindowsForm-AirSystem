@@ -1,4 +1,5 @@
 ﻿using AirSystem.Models;
+using AirSystem.Repositories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -64,7 +65,52 @@ namespace AirSystem.Views
 
         private void bttCadastrar_Click(object sender, EventArgs e)
         {
+            if (!Utils.TemCamposVazio(this))
+            {
+                UsuarioRepository repository = new UsuarioRepository();
+                if (this.usuario == null)
+                {
+                    Usuario usuario = new Usuario
+                    {
+                        Nome = txtBoxNome.Text,
+                        Sobrenome = txtBoxSobrenome.Text,
+                        Endereco = txtBoxEndereco.Text,
+                        Numero = txtBoxNumero.Text,
+                        Nascimento = dateNascimento.Text,
+                        NomeUsuario = txtBoxUsuario.Text,
+                        Senha = txtBoxSenha.Text,
+                        ConfirmarSenha = txtBoxConfirmarSenha.Text,
+                        IsAdmin = checkBoxAdmin.Checked
+                    };
 
+                    repository.Adicionar(usuario);
+
+                    MessageBox.Show("Dados Salvos.",
+                                    "Aviso", MessageBoxButtons.OK,
+                                     MessageBoxIcon.Information);
+                }
+                else
+                {
+                    this.usuario.Nome = txtBoxNome.Text;
+                    this.usuario.Sobrenome = txtBoxSobrenome.Text;
+                    this.usuario.Endereco = txtBoxEndereco.Text;
+                    this.usuario.Numero = txtBoxNumero.Text;
+                    this.usuario.Nascimento = dateNascimento.Text;
+                    this.usuario.NomeUsuario = txtBoxUsuario.Text;
+                    this.usuario.Senha = txtBoxSenha.Text;
+                    this.usuario.ConfirmarSenha = txtBoxConfirmarSenha.Text;
+                    this.usuario.IsAdmin = checkBoxAdmin.Checked;
+
+                    repository.Editar(usuario);
+                }
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Todos os campos são obrigatórios.",
+                                "Aviso", MessageBoxButtons.OK,
+                                 MessageBoxIcon.Information);
+            }
         }
     }
 }

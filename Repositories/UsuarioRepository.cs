@@ -64,5 +64,10 @@ namespace AirSystem.Repositories
             Usuario u = usuarios.Find(x => x.Id == usuario.Id);
             usuarios[usuarios.IndexOf(u)] = usuario;
         }
+
+        public List<Usuario> Listar()
+        {
+            return usuarios;
+        }
     }
 }

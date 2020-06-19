@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.txtBoxUsuario = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -40,6 +41,8 @@
             this.bttCadastrar = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblRelogio = new System.Windows.Forms.Label();
+            this.timerRelogio = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -160,11 +163,26 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // lblRelogio
+            // 
+            this.lblRelogio.AutoSize = true;
+            this.lblRelogio.Location = new System.Drawing.Point(70, 47);
+            this.lblRelogio.Name = "lblRelogio";
+            this.lblRelogio.Size = new System.Drawing.Size(64, 17);
+            this.lblRelogio.TabIndex = 13;
+            this.lblRelogio.Text = "14:00:00";
+            // 
+            // timerRelogio
+            // 
+            this.timerRelogio.Enabled = true;
+            this.timerRelogio.Tick += new System.EventHandler(this.timerRelogio_Tick);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblRelogio);
             this.Controls.Add(this.bttCadastrar);
             this.Controls.Add(this.bttSair);
             this.Controls.Add(this.bttEntrar);
@@ -180,6 +198,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmLogin";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -201,6 +220,8 @@
         private System.Windows.Forms.Button bttEntrar;
         private System.Windows.Forms.Button bttSair;
         private System.Windows.Forms.Button bttCadastrar;
+        private System.Windows.Forms.Label lblRelogio;
+        private System.Windows.Forms.Timer timerRelogio;
     }
 }
 
