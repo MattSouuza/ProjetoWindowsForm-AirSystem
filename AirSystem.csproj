@@ -55,6 +55,12 @@
     <Compile Include="Views\frmCadastro.Designer.cs">
       <DependentUpon>frmCadastro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\frmListarUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmListarUsuarios.Designer.cs">
+      <DependentUpon>frmListarUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,8 +88,14 @@
     <EmbeddedResource Include="Views\frmCadastro.resx">
       <DependentUpon>frmCadastro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmListarUsuarios.resx">
+      <DependentUpon>frmListarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

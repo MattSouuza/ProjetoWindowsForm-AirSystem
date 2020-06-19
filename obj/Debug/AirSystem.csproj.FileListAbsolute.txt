@@ -9,3 +9,5 @@ C:\Users\paulo\OneDrive\Área de Trabalho\AirSystem\obj\Debug\AirSystem.exe
 C:\Users\paulo\OneDrive\Área de Trabalho\AirSystem\obj\Debug\AirSystem.pdb
 C:\Users\paulo\OneDrive\Área de Trabalho\AirSystem\obj\Debug\AirSystem.frmLogin.resources
 C:\Users\paulo\OneDrive\Área de Trabalho\AirSystem\obj\Debug\AirSystem.Views.frmCadastro.resources
+C:\Users\paulo\OneDrive\Área de Trabalho\AirSystem\obj\Debug\AirSystem.Views.frmListarUsuarios.resources
+C:\Users\paulo\OneDrive\Área de Trabalho\AirSystem\obj\Debug\AirSystem.Views.frmPrincipal.resources

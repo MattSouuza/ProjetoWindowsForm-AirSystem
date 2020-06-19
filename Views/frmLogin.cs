@@ -40,9 +40,9 @@ namespace AirSystem
             UsuarioRepository repository = new UsuarioRepository();
             List<Usuario> listaUsuariosExistentes = repository.Listar();
 
-            Usuario usuarioAtual = listaUsuariosExistentes.FirstOrDefault(u => u.NomeUsuario == txtBoxUsuario.Text && u.Senha == txtBoxSenha.Text);
+            Usuario usuarioLogin = listaUsuariosExistentes.FirstOrDefault(u => u.NomeUsuario == txtBoxUsuario.Text && u.Senha == txtBoxSenha.Text);
 
-            if (usuarioAtual != null)
+            if (usuarioLogin != null)
             {
                 MessageBox.Show("Bem-vindo!", "Entrada");
                 new frmPrincipal().ShowDialog(); 

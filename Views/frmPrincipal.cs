@@ -16,5 +16,10 @@ namespace AirSystem.Views
         {
             InitializeComponent();
         }
+
+        private void bttListar_Click(object sender, EventArgs e)
+        {
+            new frmListarUsuarios().ShowDialog();
+        }
     }
 }
